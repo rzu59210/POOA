@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ff12932-b669-4e34-8b52-c7ae9411b407" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/drawing/DissociateButtonListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/drawing/Drawing.class" afterPath="$PROJECT_DIR$/bin/drawing/Drawing.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/drawing/DrawingMouseListener.class" afterPath="$PROJECT_DIR$/bin/drawing/DrawingMouseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/drawing/GroupForm.class" afterPath="$PROJECT_DIR$/bin/drawing/GroupForm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/drawing/Paint.class" afterPath="$PROJECT_DIR$/bin/drawing/Paint.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drawing/ClearButtonListener.java" afterPath="$PROJECT_DIR$/src/drawing/ClearButtonListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drawing/Drawing.java" afterPath="$PROJECT_DIR$/src/drawing/Drawing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drawing/DrawingMouseListener.java" afterPath="$PROJECT_DIR$/src/drawing/DrawingMouseListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drawing/GroupForm.java" afterPath="$PROJECT_DIR$/src/drawing/GroupForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drawing/Paint.java" afterPath="$PROJECT_DIR$/src/drawing/Paint.java" />
     </list>
     <ignored path="Drawing.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -769,16 +759,23 @@
       <option name="number" value="Default" />
       <updated>1475824663374</updated>
       <workItem from="1483433961588" duration="3000" />
-      <workItem from="1483434354415" duration="2728000" />
+      <workItem from="1483434354415" duration="2831000" />
     </task>
+    <task id="LOCAL-00001" summary="Global Update">
+      <created>1483438542255</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1483438542255</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2731000" />
+    <option name="totallyTimeSpent" value="2834000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -839,6 +836,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Global Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Global Update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
