@@ -1,4 +1,4 @@
-package à;
+package drawing;
 
 import java.awt.*;
 
@@ -45,7 +45,7 @@ public class Paint {
         buttonPanel.add(circleButton);
         buttonPanel.add(rectangleButton);
         buttonPanel.add(groupButton);
-        buttonPanel.add(duplicateButton);
+        //buttonPanel.add(duplicateButton);
      /*   statusPanel.add(buttonPanel, BorderLayout.SOUTH);
         statusPanel.add(nbFigureText , BorderLayout.SOUTH);
         statusText.add(nbFigures , BorderLayout.SOUTH);

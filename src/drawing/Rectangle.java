@@ -21,6 +21,11 @@ public class Rectangle extends Shape {
 		return(p.x > origin.x && p.x < origin.x+width && p.y > origin.y && p.y < origin.y+height);
 	}
 
+	@Override
+	public Shape clone() {
+		return null;
+	}
+
 	public void paint(Graphics g) {
 		g.setColor(color);
 		g.fillRect(origin.x, origin.y, width, height);

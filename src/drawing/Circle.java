@@ -24,7 +24,12 @@ public class Circle extends Shape{
 	public boolean isOn(Point p) {
 		return distanceToCenter(p)<radius;		
 	}
-	
+
+	@Override
+	public Shape clone() {
+		return null;
+	}
+
 	private double distanceToCenter(Point p){
 		return this.origin.distance(p);
 	}

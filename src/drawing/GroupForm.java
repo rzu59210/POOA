@@ -50,6 +50,12 @@ public class GroupForm extends Shape {
         }
         return false;
     }
+
+    @Override
+    public Shape clone() {
+        return null;
+    }
+
     @Override
     public void setOrigin(Point p){
         int newX = this.origin.x - p.x;
