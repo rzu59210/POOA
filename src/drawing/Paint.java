@@ -51,7 +51,7 @@ public class Paint {
         buttonPanel.add(dissociateButton);
         buttonPanel.add(redo);
         buttonPanel.add(undo);
-        //buttonPanel.add(duplicateButton);
+        buttonPanel.add(duplicateButton);
         statusObs = new StatusObserver();
 
         mainPanel.add(buttonPanel, BorderLayout.NORTH);
@@ -74,7 +74,7 @@ public class Paint {
         drawing.addObserver(statusObs);
 
         frame.getContentPane().add(mainPanel);
-        frame.setSize(640, 480);
+        frame.setSize(800, 480);
         frame.setVisible(true);
     }
 

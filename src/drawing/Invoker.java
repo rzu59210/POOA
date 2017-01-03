@@ -7,17 +7,17 @@ import java.util.ArrayList;
 public class Invoker implements ActionListener {
 
     Drawing drawing;
-    private ArrayList<Command> Lst_Commande;
-    private ArrayList<Command> Lst_RedoCommand;
+    private ArrayList<Command> commandesList;
+    private ArrayList<Command> commandesRedoList;
 
     public Invoker(Drawing drawing) {
         this.drawing = drawing;
-        Lst_Commande = new ArrayList<>();
-        Lst_RedoCommand = new ArrayList<>();
+        commandesList = new ArrayList<>();
+        commandesRedoList = new ArrayList<>();
     }
 
     public void doAction(Command command) {
-        Lst_Commande.add(command);
+        commandesList.add(command);
         command.execute();
     }
 
@@ -40,18 +40,18 @@ public class Invoker implements ActionListener {
                 doAction(new CommandCopyButton(this.drawing));
                 break;
             case "Undo":
-                if (Lst_Commande.size() > 0) {
-                    Lst_RedoCommand.add(Lst_Commande.get(Lst_Commande.size() - 1));
-                    Lst_Commande.get(Lst_Commande.size() - 1).unexecute();
-                    Lst_Commande.remove(Lst_Commande.size() - 1);
+                if (commandesList.size() > 0) {
+                    commandesRedoList.add(commandesList.get(commandesList.size() - 1));
+                    commandesList.get(commandesList.size() - 1).unexecute();
+                    commandesList.remove(commandesList.size() - 1);
                     drawing.repaint();
                 }
                 break;
             case "Redo":
-                if (Lst_RedoCommand.size() > 0) {
-                    Lst_RedoCommand.get(Lst_RedoCommand.size() - 1).execute();
-                    Lst_Commande.add(Lst_RedoCommand.get(Lst_RedoCommand.size() - 1));
-                    Lst_RedoCommand.remove(Lst_RedoCommand.size() - 1);
+                if (commandesRedoList.size() > 0) {
+                    commandesRedoList.get(commandesRedoList.size() - 1).execute();
+                    commandesList.add(commandesRedoList.get(commandesRedoList.size() - 1));
+                    commandesRedoList.remove(commandesRedoList.size() - 1);
                     drawing.repaint();
                 }
                 break;
@@ -60,7 +60,8 @@ public class Invoker implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {System.out.println("Command : " + e.getActionCommand());
+    public void actionPerformed(ActionEvent e) {
+        System.out.println("Command : " + e.getActionCommand());
         executeCommand(e.getActionCommand());
     }
 }
