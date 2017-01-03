@@ -1,0 +1,11 @@
+1 - Analyse du code
+
+Les patrons de conception utilisés sont : Observer - Composite - Decorator
+
+2 - Première évolution
+
+Implémentation du patron de conception : Observer
+
+3 - Deuxieme évolution
+
+Implémentation du patron de conception : Composite
