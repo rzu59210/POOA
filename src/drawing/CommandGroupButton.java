@@ -7,7 +7,7 @@ import java.awt.event.MouseMotionListener;
 
 public class CommandGroupButton implements Command {
 
-    Drawing drawing;
+    private Drawing drawing;
     private GroupForm groupForm;
 
     public CommandGroupButton(Drawing draw){

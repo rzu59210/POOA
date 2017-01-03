@@ -10,11 +10,12 @@ import java.awt.event.MouseListener;
  * Classe abstraite (Template Pattern) pour les listeners des boutons de
  * cr�ation de formes.
  */
-public abstract class ShapeButtonListener implements ActionListener, MouseListener {
+public abstract class ShapeButtonListener implements MouseListener, Command {
 
 	Drawing drawing;
 	Point origin;
 	Point destination;
+	Boolean undo = false;
 	
 	public ShapeButtonListener(Drawing drawing){
 
@@ -38,6 +39,16 @@ public abstract class ShapeButtonListener implements ActionListener, MouseListen
 		Shape s = createShape();
 		drawing.addShape(s);
 		drawing.removeMouseListener(this);
+	}
+	public void execute(){
+		System.out.println("Undo : " + undo);
+		if(!undo){
+			drawing.addMouseListener(this);
+			undo = true;
+		} else {
+			Shape s = createShape();
+			drawing.addShape(s);
+		}
 	}
 	
 	/**

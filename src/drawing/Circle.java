@@ -15,6 +15,7 @@ public class Circle extends Shape{
 	}
 	
 	public void paint(Graphics g){
+		System.out.println("Dessiner un cercle..");
 		g.setColor(color);
 		g.fillOval((int)(origin.getX()-radius), (int)(origin.getY()-radius), (int)(2*radius), (int)(2*radius));
 		g.setColor(Color.BLACK);

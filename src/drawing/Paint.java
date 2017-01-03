@@ -23,13 +23,6 @@ public class Paint {
 
     private Drawing drawing;
 
-    private JLabel nbCircles;
-    private JLabel nbFigures;
-    private JLabel nbRectangles;
-
-    private JTextField nbCirclesText;
-    private JTextField nbRectanglesText;
-    private JTextField nbFigureText;
 
     private StatusObserver statusObs;
 
@@ -61,7 +54,7 @@ public class Paint {
         mainPanel.add(statusObs, BorderLayout.SOUTH);
 
         Invoker invoker = new Invoker(drawing);
-        clearButton.addActionListener(invoker);
+        clearButton.addActionListener(new ClearButtonListener(drawing));
         circleButton.addActionListener(invoker);
         rectangleButton.addActionListener(invoker);
         groupButton.addActionListener(invoker);

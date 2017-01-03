@@ -2,17 +2,18 @@ package drawing;
 
 import java.awt.*;
 
-public class CommandCircleButton extends ShapeButtonListener implements Command{
+public class CommandCircleButton extends ShapeButtonListener {
 
-    private Drawing drawing;
     private Circle circle;
 
     public CommandCircleButton(Drawing drawing) {
         super(drawing);
-        this.drawing = drawing;
+        System.out.println("Instance du cercle");
     }
 
+    @Override
     protected Shape createShape() {
+        System.out.println("Former créer");
         double width = Math.abs(destination.getX() - origin.getX());
         double height = Math.abs(destination.getY() - origin.getY());
         double radius = Math.max(width, height) / 2;
@@ -23,10 +24,7 @@ public class CommandCircleButton extends ShapeButtonListener implements Command{
         return circle;
     }
 
-    @Override
-    public void execute() {
 
-    }
 
     @Override
     public void unexecute() {

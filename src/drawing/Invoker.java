@@ -22,6 +22,7 @@ public class Invoker implements ActionListener {
     }
 
     public void executeCommand(String command) {
+        System.out.println("Execute cmd : " + command);
         switch (command) {
             case "Circle":
                 doAction(new CommandCircleButton(this.drawing));
@@ -52,9 +53,7 @@ public class Invoker implements ActionListener {
                     Lst_RedoCommand.remove(Lst_RedoCommand.size() - 1);
                 }
                 break;
-            case "Deplacer":
-                doAction(new CommandMove(this.drawing));
-                break;
+
         }
     }
 

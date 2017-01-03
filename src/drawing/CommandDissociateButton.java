@@ -1,8 +1,5 @@
 package drawing;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 public class CommandDissociateButton implements Command {
 
     private Drawing drawing;

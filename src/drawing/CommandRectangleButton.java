@@ -2,7 +2,7 @@ package drawing;
 
 import java.awt.*;
 
-public class CommandRectangleButton extends ShapeButtonListener implements Command{
+public class CommandRectangleButton extends ShapeButtonListener{
 
     private Drawing drawing;
     private Rectangle rectangle;
@@ -18,11 +18,6 @@ public class CommandRectangleButton extends ShapeButtonListener implements Comma
         double height = Math.abs(destination.getY() - origin.getY());
         this.rectangle = new Rectangle(origin, (int) width, (int) height, Color.BLUE);
         return rectangle;
-    }
-
-    @Override
-    public void execute() {
-
     }
 
     @Override
