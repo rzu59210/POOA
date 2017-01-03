@@ -44,6 +44,7 @@ public class Invoker implements ActionListener {
                     Lst_RedoCommand.add(Lst_Commande.get(Lst_Commande.size() - 1));
                     Lst_Commande.get(Lst_Commande.size() - 1).unexecute();
                     Lst_Commande.remove(Lst_Commande.size() - 1);
+                    drawing.repaint();
                 }
                 break;
             case "Redo":
@@ -51,6 +52,7 @@ public class Invoker implements ActionListener {
                     Lst_RedoCommand.get(Lst_RedoCommand.size() - 1).execute();
                     Lst_Commande.add(Lst_RedoCommand.get(Lst_RedoCommand.size() - 1));
                     Lst_RedoCommand.remove(Lst_RedoCommand.size() - 1);
+                    drawing.repaint();
                 }
                 break;
 
@@ -58,8 +60,7 @@ public class Invoker implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        System.out.println("Command : " + e.getActionCommand());
+    public void actionPerformed(ActionEvent e) {System.out.println("Command : " + e.getActionCommand());
         executeCommand(e.getActionCommand());
     }
 }
