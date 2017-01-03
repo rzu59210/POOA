@@ -17,7 +17,8 @@ public class Paint {
     private JButton groupButton;
     private JButton dissociateButton;
     private JButton duplicateButton;
-
+    private JButton redo;
+    private JButton undo;
     private JPanel buttonPanel;
     private JPanel mainPanel;
 
@@ -39,6 +40,8 @@ public class Paint {
         groupButton = new JButton("Grouper");
         dissociateButton = new JButton("Dissocier");
         duplicateButton = new JButton("Dupliquer");
+        redo = new JButton("Redo");
+        undo = new JButton("Undo");
 
         buttonPanel = new JPanel();
         buttonPanel.add(clearButton);
@@ -46,6 +49,8 @@ public class Paint {
         buttonPanel.add(rectangleButton);
         buttonPanel.add(groupButton);
         buttonPanel.add(dissociateButton);
+        buttonPanel.add(redo);
+        buttonPanel.add(undo);
         //buttonPanel.add(duplicateButton);
         statusObs = new StatusObserver();
 
@@ -60,6 +65,8 @@ public class Paint {
         groupButton.addActionListener(invoker);
         dissociateButton.addActionListener(invoker);
         duplicateButton.addActionListener(invoker);
+        redo.addActionListener(invoker);
+        undo.addActionListener(invoker);
 
         DrawingMouseListener l = new DrawingMouseListener(drawing, invoker);
         drawing.addMouseListener(l);
