@@ -37,9 +37,6 @@ public class Drawing extends JPanel implements Iterable<Shape> {
         this.repaint();
     }
 
-    /**
-     * Red�finition de la m�thode paintComponent() de JComponent
-     */
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         for (Shape s : shapes) {
@@ -47,9 +44,6 @@ public class Drawing extends JPanel implements Iterable<Shape> {
         }
     }
 
-    /**
-     * Enl�ve toutes les formes et redessine
-     */
     public void clear() {
         shapes.clear();
         notifyObservers();
@@ -70,12 +64,11 @@ public class Drawing extends JPanel implements Iterable<Shape> {
 
     }
 
-    public void removeForm(Shape shape){
+    public void removeForm(Shape shape) {
         this.shapes.remove(shape);
     }
 
     public int countForms() {
         return shapes.size();
     }
-
 }
