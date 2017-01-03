@@ -8,8 +8,10 @@ public class DrawingMouseListener implements MouseMotionListener, MouseListener 
 
     Drawing drawing;
     Shape currentShape = null;
+    Invoker invoker;
 
-    public DrawingMouseListener(Drawing d) {
+    public DrawingMouseListener(Drawing d, Invoker invoker) {
+        this.invoker = invoker;
         drawing = d;
     }
 

@@ -1,14 +1,15 @@
 package drawing;
 
-import java.awt.Color;
-import java.awt.Point;
+import java.awt.*;
 
-public class CircleButtonListener extends ShapeButtonListener {
+public class CommandCircleButton extends ShapeButtonListener implements Command{
+
     private Drawing drawing;
-    public CircleButtonListener(Drawing drawing) {
+    private Circle circle;
+
+    public CommandCircleButton(Drawing drawing) {
         super(drawing);
         this.drawing = drawing;
-
     }
 
     protected Shape createShape() {
@@ -18,7 +19,17 @@ public class CircleButtonListener extends ShapeButtonListener {
         double centerX = (destination.getX() + origin.getX()) / 2;
         double centerY = (destination.getY() + origin.getY()) / 2;
         Point center = new Point((int) centerX, (int) centerY);
-        Circle c = new Circle(center, radius, Color.RED);
-        return c;
+        this.circle = new Circle(center, radius, Color.RED);
+        return circle;
+    }
+
+    @Override
+    public void execute() {
+
+    }
+
+    @Override
+    public void unexecute() {
+        drawing.removeForm(circle);
     }
 }

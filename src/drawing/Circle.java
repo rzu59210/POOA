@@ -27,7 +27,7 @@ public class Circle extends Shape{
 
 	@Override
 	public Shape clone() {
-		return null;
+		return new Circle(this.origin,this.radius,this.color);
 	}
 
 	private double distanceToCenter(Point p){

@@ -3,9 +3,6 @@ package drawing;
 import java.awt.*;
 import java.util.ArrayList;
 
-/**
- * Created by kevin on 22/11/2016.
- */
 public class GroupForm extends Shape {
 
     private ArrayList<Shape> shapes;
@@ -57,7 +54,12 @@ public class GroupForm extends Shape {
 
     @Override
     public Shape clone() {
-        return null;
+        GroupForm compositeShape = new GroupForm();
+        compositeShape.origin = this.origin;
+        for(Shape shape : this.shapes) {
+            compositeShape.addForm(shape.clone());
+        }
+        return compositeShape;
     }
 
     @Override
@@ -70,6 +72,5 @@ public class GroupForm extends Shape {
             shape.setOrigin(newPoint);
         }
         this.origin = p;
-
     }
 }

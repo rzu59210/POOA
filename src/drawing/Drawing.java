@@ -4,10 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 
-
-/**
- * JPanel pouvant afficher des objets de type Shape
- */
 public class Drawing extends JPanel implements Iterable<Shape> {
 
     private static final long serialVersionUID = 1L;
@@ -37,6 +33,10 @@ public class Drawing extends JPanel implements Iterable<Shape> {
         this.repaint();
     }
 
+    public void removeForm(Shape shape) {
+        this.shapes.remove(shape);
+    }
+
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         for (Shape s : shapes) {
@@ -62,10 +62,6 @@ public class Drawing extends JPanel implements Iterable<Shape> {
         for (Observer obs : observers)
             obs.update(this);
 
-    }
-
-    public void removeForm(Shape shape) {
-        this.shapes.remove(shape);
     }
 
     public int countForms() {

@@ -9,6 +9,7 @@ import java.awt.Point;
 public abstract class Shape {
 	
 	protected Point origin;
+	public boolean isSelected = false;
 	
 	public void setOrigin(Point p)
 	{

@@ -16,7 +16,7 @@ public class Paint {
     private JButton rectangleButton;
     private JButton groupButton;
     private JButton dissociateButton;
-    //private JButton duplicateButton;
+    private JButton duplicateButton;
 
     private JPanel buttonPanel;
     private JPanel mainPanel;
@@ -45,7 +45,7 @@ public class Paint {
         rectangleButton = new JButton("Rectangle");
         groupButton = new JButton("Grouper");
         dissociateButton = new JButton("Dissocier");
-        //duplicateButton = new JButton("Dupliquer");
+        duplicateButton = new JButton("Dupliquer");
 
         buttonPanel = new JPanel();
         buttonPanel.add(clearButton);
@@ -60,13 +60,15 @@ public class Paint {
         mainPanel.add(drawing, BorderLayout.CENTER);
         mainPanel.add(statusObs, BorderLayout.SOUTH);
 
-        clearButton.addActionListener(new ClearButtonListener(drawing));
-        circleButton.addActionListener(new CircleButtonListener(drawing));
-        rectangleButton.addActionListener(new RectangleButtonListener(drawing));
-        groupButton.addActionListener(new GroupButtonListener(drawing));
-        dissociateButton.addActionListener(new DissociateButtonListener(drawing));
+        Invoker invoker = new Invoker(drawing);
+        clearButton.addActionListener(invoker);
+        circleButton.addActionListener(invoker);
+        rectangleButton.addActionListener(invoker);
+        groupButton.addActionListener(invoker);
+        dissociateButton.addActionListener(invoker);
+        duplicateButton.addActionListener(invoker);
 
-        DrawingMouseListener l = new DrawingMouseListener(drawing);
+        DrawingMouseListener l = new DrawingMouseListener(drawing, invoker);
         drawing.addMouseListener(l);
         drawing.addMouseMotionListener(l);
         drawing.addObserver(statusObs);
