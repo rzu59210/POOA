@@ -10,7 +10,11 @@ public abstract class Shape {
 	
 	protected Point origin;
 	public boolean isSelected = false;
-	
+
+	public Point getOrigin() {
+		return origin;
+	}
+
 	public void setOrigin(Point p)
 	{
 		origin = p;
@@ -27,4 +31,12 @@ public abstract class Shape {
 	public abstract boolean isOn(Point p);
 
 	public abstract Shape clone();
+
+	public boolean isSelected() {
+		return isSelected;
+	}
+
+	public void setSelected(boolean selected) {
+		isSelected = selected;
+	}
 }

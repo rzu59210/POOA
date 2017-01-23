@@ -55,7 +55,9 @@ public class Invoker implements ActionListener {
                     drawing.repaint();
                 }
                 break;
-
+            case "Text":
+                doAction(new CommandText(this.drawing));
+                break;
         }
     }
 

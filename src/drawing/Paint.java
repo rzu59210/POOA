@@ -19,14 +19,14 @@ public class Paint {
     private JButton duplicateButton;
     private JButton redo;
     private JButton undo;
+    private JButton text;
+
     private JPanel buttonPanel;
     private JPanel mainPanel;
 
     private Drawing drawing;
 
-
     private StatusObserver statusObs;
-
 
     public void run() {
         frame = new JFrame("Paint");
@@ -42,6 +42,7 @@ public class Paint {
         duplicateButton = new JButton("Dupliquer");
         redo = new JButton("Redo");
         undo = new JButton("Undo");
+        text = new JButton("Text");
 
         buttonPanel = new JPanel();
         buttonPanel.add(clearButton);
@@ -49,9 +50,10 @@ public class Paint {
         buttonPanel.add(rectangleButton);
         buttonPanel.add(groupButton);
         buttonPanel.add(dissociateButton);
+        buttonPanel.add(duplicateButton);
         buttonPanel.add(redo);
         buttonPanel.add(undo);
-        buttonPanel.add(duplicateButton);
+        buttonPanel.add(text);
         statusObs = new StatusObserver();
 
         mainPanel.add(buttonPanel, BorderLayout.NORTH);
@@ -67,6 +69,7 @@ public class Paint {
         duplicateButton.addActionListener(invoker);
         redo.addActionListener(invoker);
         undo.addActionListener(invoker);
+        text.addActionListener(invoker);
 
         DrawingMouseListener l = new DrawingMouseListener(drawing, invoker);
         drawing.addMouseListener(l);
